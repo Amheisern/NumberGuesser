@@ -1,0 +1,19 @@
+{
+  "folders": [
+	{
+		"path": "..\\EmployeeDatabase"
+	},
+	{
+		"path": "."
+	},
+	{
+		"path": "..\\AllCardsOnDeckCS"
+	},
+	{
+		"path": "..\\VariablesCS"
+	}
+],
+  "settings": {
+    "cSpell.words": ["Amheiser", "pedaco"]
+  }
+}

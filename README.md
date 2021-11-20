@@ -56,17 +56,19 @@ Data set - Methods, loops, if then, nested loops
 
 Algorithm for adventure mode
 
-1. greet user (METHOD A)
-2. Prompt user to guess a number between 1 and 1024
-3. Ask user "Do you have a number in your mind, enter yes or no"
-4. If input is yes then display a RANDOMLY guessed number
-5. Ask user "Is my guess CORRECT, or is your number HIGHER or LOWER" (loop?) (i don't know how to do the math/code here)
-6. If HIGHER then guess a HIGHER number in the middle of the list of numberS then return to step 5 (loop?) (i don't know how to do the math/code here) (METHOD C)
-7. IF LOWER then guess a LOWER number in the middle of the list of number then return to step 5 (loop?) (i don't know how to do the math/code here) (METHOD B)
-8. Repeat (loop) steps 5 (6 or 7) until user inputs CORRECT (loop)
-9. When user input is CORRECT display "that was easy" (METHOD D)
+//1. greet user (METHOD A)
+//2. Prompt user to guess a number between 1 and 1024
+//3. Ask user "Do you have a number in your mind, enter yes or no"
+//4. If input is yes then display a RANDOMLY guessed number
+//5. Ask user "Is my guess CORRECT, or is your number HIGHER or LOWER" (loop?) (i don't know how to //do the math/code here)
+//6. If HIGHER then guess a HIGHER number in the middle of the list of numberS then return to step 5
+// (loop?) (i don't know how to do the math/code here) (METHOD C)
+//7. IF LOWER then guess a LOWER number in the middle of the list of number then return to step 5
+//(loop?) (i don't know how to do the math/code here) (METHOD B)
+//8. Repeat (loop) steps 5 (6 or 7) until user inputs CORRECT (loop)
+//9. When user input is CORRECT display "that was easy" (METHOD D)
+//10. step 3: else display "Come on I don't have all day!" then return to step 3 until answer is yes //(loop?)
 
-10. step 3: else display "Come on I don't have all day!" then return to step 3 until answer is yes (loop?)
     Need methods
     A. ShowGreeting
     B. ComputeNewLowIfTooLow
