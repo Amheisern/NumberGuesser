@@ -24,6 +24,8 @@ namespace NumberGuesser
         static void Main(string[] args)
 
         {
+            int min = 0;
+            int max = 1024;
             //greet user (METHOD A)
             DisplayGreeting();
             //2. Prompt user to guess number between 1 and 1024
