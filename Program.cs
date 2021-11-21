@@ -4,6 +4,16 @@ namespace NumberGuesser
 {
     class Program
     {
+
+        private static string Dialog(string message)
+
+        {
+            //write the nessage
+            Console.Write(message);
+            //return what the user entered 
+            return Console.ReadLine();
+        }
+
         static void DisplayGreeting()
         {
 
@@ -12,13 +22,6 @@ namespace NumberGuesser
             Console.WriteLine("----------------------------------------");
             Console.WriteLine();
             Console.WriteLine();
-        }
-        private static string Dialog(string message)
-        {
-            //write the nessage
-            Console.Write(message);
-            //return what the user entered 
-            return Console.ReadLine();
         }
 
         static void Main(string[] args)
@@ -33,19 +36,23 @@ namespace NumberGuesser
             //4. If input is yes then display a RANDOMLY guessed number
             var start = Dialog("Enter yes or no:");
 
-            //Changing the dialog to change name in case of "alice"
+            //4.If input is "yes" then display a RANDOMLY guessed number
             if (start == "yes")
             {
                 Random rand = new Random();
                 int number = rand.Next(1, 1024);
                 Console.WriteLine(number);
             }
+
+            // //10. step 3: else display "Come on I don't have all day!" then return to step 3 until answer is yes //(loop?)
             else
             {
                 Console.WriteLine("Come on, I don't have all day!");
-                // until(Console.ReadLine == "yes");
+
             }
 
         }
+
     }
 }
+
