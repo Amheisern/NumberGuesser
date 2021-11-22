@@ -36,16 +36,16 @@ namespace NumberGuesser
             var start = Dialog("Enter yes or no:");
 
             //Changing the dialog to change name in case of "alice"
-            if (start == "yes")
+            if (start.ToLower() == "yes")
             {
                 Random rand = new Random();
                 int number = rand.Next(min, max);
                 Console.WriteLine(number);
             }
-            else
+            if (start.ToLower() == "no")
             {
                 Console.WriteLine("Come on, I don't have all day!");
-                // until(Console.ReadLine == "yes");
+                //var restart = Dialog("Enter yes or no:");
             }
 
         }
