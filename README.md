@@ -59,15 +59,20 @@ Algorithm for adventure mode
 //1. greet user (METHOD A)
 //2. Prompt user to guess a number between 1 and 1024
 //3. Ask user "Do you have a number in your mind, enter yes or no"
-//4. If input is yes then display a RANDOMLY guessed number
+//4. If input is "yes" then display a RANDOMLY guessed number
+//If input is "no" then display"Come on I don't have all day!"
+//then return use to step 3
 //5. Ask user "Is my guess CORRECT, or is your number HIGHER or LOWER" (loop?) (i don't know how to //do the math/code here)
-//6. If HIGHER then guess a HIGHER number in the middle of the list of numberS then return to step 5
+//6. If HIGHER then guess a HIGHER number that is half as much as guessed number and max return to step 5
 // (loop?) (i don't know how to do the math/code here) (METHOD C)
 //7. IF LOWER then guess a LOWER number in the middle of the list of number then return to step 5
 //(loop?) (i don't know how to do the math/code here) (METHOD B)
 //8. Repeat (loop) steps 5 (6 or 7) until user inputs CORRECT (loop)
 //9. When user input is CORRECT display "that was easy" (METHOD D)
-//10. step 3: else display "Come on I don't have all day!" then return to step 3 until answer is yes //(loop?)
+//higher1 = half the number between previous guess and max
+//lower1 = half the number between the previous guess and the minimum number
+//higherN = half the number between the previous guess and the 1st guessed number
+//lowerN = half the number between the previous guess and the 1st guessed number
 
     Need methods
     A. ShowGreeting
