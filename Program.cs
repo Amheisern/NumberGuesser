@@ -1,83 +1,46 @@
 ﻿using System;
-
 namespace NumberGuesser
 {
     class Program
     {
-
-        static void DisplayGreeting()
+        static void Main(string[] args)
         {
-
-            Console.WriteLine("----------------------------------------");
-            Console.WriteLine("      Welcome to The Number Guesser     ");
-            Console.WriteLine("----------------------------------------");
-            Console.WriteLine();
-            Console.WriteLine();
+            var min = 1;
+            var max = 1024;
+            ShowGreeting();
+            GuessNumber(min, max);
         }
-        private static string Dialog(string message)
+        static void ShowGreeting()
         {
-            //write the nessage
-            Console.Write(message);
-            //return what the user entered 
-            return Console.ReadLine();
+            Console.WriteLine("Welcome to Number Guesser! Think of a number between 1 and 1024. Hit <Enter> when you're ready!");
+            Console.ReadLine();
         }
-
-        static void GuessNumber(int high, int low)
+        static void GuessNumber(int low, int high)
         {
-            int min = 0;
-            int max = 1024;
-            var mid = min + max / 2;
-            Console.WriteLine($"is you number {mid}? ");
+
+            var mid = (low + high) / 2;
+            Console.WriteLine($"Is your number {(mid / 2) * 2 }? Type 'y' for yes, 'l' for lower, or 'h' for higher.");
             var result = Console.ReadLine();
-
             if (result == "y")
             {
-                Console.WriteLine("Wut Wut!");
+                Console.WriteLine("GREAT");
             }
             else if (result == "l")
             {
-                // do something 
+                var newMax = mid;
+                GuessNumber(newMax, low);
+
             }
             else if (result == "h")
             {
-                // do somthing higher  
+                var newMin = mid;
+                GuessNumber(newMin, high);
             }
             else
             {
-                Console.WriteLine(" come on! Don't be difficult!");
+                Console.WriteLine("Please type 'y', 'l', or 'h'");
             }
         }
-
-        static void Main(string[] args)
-
-        {
-
-
-            //greet user (METHOD A)
-            DisplayGreeting();
-            //2. Prompt user to guess number between 1 and 1024
-            Console.WriteLine("Please, guess a number in your head between 1 and 1024!");
-            //3. Ask user "Do you have a number in your mind, enter yes or no"
-            // Console.WriteLine("Do you have a number in your head, enter yes or no");
-            //4. If input is yes then display a RANDOMLY guessed number
-            var start = Dialog("Hit enter when ready");
-            GuessNumber();
-            //  Console.WriteLine(mid);
-            //Changing the dialog to change name in case of "alice"
-            // while (start.ToLower() == "no")
-            // {
-            //     Console.WriteLine("Come on, I don't have all day!");
-            //     //var restart = Dialog("Enter yes or no:");
-
-            //     if (start.ToLower() == "yes")
-            //     {
-            //         Random rand = new Random();
-            //         int number = rand.Next(min, max);
-            //         Console.WriteLine(number);
-            //     }
-            //     break;
-        }
-
     }
 }
 
