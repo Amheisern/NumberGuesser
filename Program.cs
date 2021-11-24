@@ -19,7 +19,7 @@ namespace NumberGuesser
         {
 
             var mid = (low + high) / 2;
-            Console.WriteLine($"Is your number {(mid / 2) * 2 }? Type 'y' for yes, 'l' for lower, or 'h' for higher.");
+            Console.WriteLine($"Is your number {mid}? Type 'y' for yes, 'l' for lower, or 'h' for higher.");
             var result = Console.ReadLine();
             if (result == "y")
             {
@@ -27,8 +27,8 @@ namespace NumberGuesser
             }
             else if (result == "l")
             {
-                var newMax = mid;
-                GuessNumber(newMax, low);
+                var newMin = mid / 2;
+                GuessNumber(newMin, low);
 
             }
             else if (result == "h")
