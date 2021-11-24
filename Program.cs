@@ -22,12 +22,37 @@ namespace NumberGuesser
             return Console.ReadLine();
         }
 
-        static void Main(string[] args)
-
+        static void GuessNumber(int high, int low)
         {
             int min = 0;
             int max = 1024;
-            int mid = min + max / 2;
+            var mid = min + max / 2;
+            Console.WriteLine($"is you number {mid}? ");
+            var result = Console.ReadLine();
+
+            if (result == "y")
+            {
+                Console.WriteLine("Wut Wut!");
+            }
+            else if (result == "l")
+            {
+                // do something 
+            }
+            else if (result == "h")
+            {
+                // do somthing higher  
+            }
+            else
+            {
+                Console.WriteLine(" come on! Don't be difficult!");
+            }
+        }
+
+        static void Main(string[] args)
+
+        {
+
+
             //greet user (METHOD A)
             DisplayGreeting();
             //2. Prompt user to guess number between 1 and 1024
@@ -36,7 +61,8 @@ namespace NumberGuesser
             // Console.WriteLine("Do you have a number in your head, enter yes or no");
             //4. If input is yes then display a RANDOMLY guessed number
             var start = Dialog("Hit enter when ready");
-            Console.WriteLine(mid);
+            GuessNumber();
+            //  Console.WriteLine(mid);
             //Changing the dialog to change name in case of "alice"
             // while (start.ToLower() == "no")
             // {

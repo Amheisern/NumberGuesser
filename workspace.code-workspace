@@ -5,15 +5,7 @@
 	},
 	{
 		"path": "."
-	},
-	{
-		"path": "..\\AllCardsOnDeckCS"
-	},
-	{
-		"path": "..\\VariablesCS"
 	}
 ],
-  "settings": {
-    "cSpell.words": ["Amheiser", "pedaco"]
-  }
+  "settings": {}
 }
