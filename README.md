@@ -58,13 +58,13 @@ Algorithm for adventure mode
 BINARY SEARCH
 //1. greet user (METHOD A)
 //2. Prompt user to guess a number between 1 and 1024
-//3. Ask user "Do you have a number in your mind, enter yes or no"
-//4. CHANGE If input is "yes" then display a RANDOMLY guessed number (do not random -- half of max)
-//5. Ask user "Is my guess CORRECT, or is your number HIGHER or LOWER" (loop?) (i don't know how to //do the math/code here)
-//6. If HIGHER then guess a HIGHER number that is half as much as length between guessed number and max return to step 5
-// (loop?) (i don't know how to do the math/code here) (METHOD C)
-//7. IF LOWER then guess a LOWER number in the middle of the list of number then return to step 5
-//(loop?) (i don't know how to do the math/code here) (METHOD B)
+//3. Prompt user to hit enter when they are ready
+//4. When user hit enter DISPLAY number that is (max / 2)
+//5. Display question is this guess correct or should next guess be higher or lower than first guess
+//6. If user inputs HIGHER then the next guess should be greater than last guess by at least 1 (METHOD C)
+
+//7. //6. If user inputs LOWER then the next guess should be less than last guess by at least 1(METHOD B)
+
 //8. Repeat (loop) steps 5 (6 or 7) until user inputs CORRECT (loop)
 //9. When user input is CORRECT display "that was easy" (METHOD D)
 //higher1 = half the number between previous guess and max
@@ -81,3 +81,48 @@ BINARY SEARCH
 //If input is "no" then display"Come on I don't have all day!"
 //then return use to step 3
 //Console.WriteLine((1024 + mid + 1) / 2);
+
+using System;
+namespace NumberGuesser
+{
+class Program
+{
+static void ShowGreeeting()
+{
+Console.WriteLine("Welcome to Number Guesser! Think of a number between 1 and 1024. Hit <Enter> when you're ready!");
+Console.ReadLine();
+}
+static void GuessNumber(int low, int high)
+{
+var mid = (low + high) / 2;
+Console.WriteLine($"Is your number {mid}? Type 'y' for yes, 'l' for lower, or 'h' for higher.");
+var result = Console.ReadLine();
+if (result == "y")
+{
+Console.WriteLine("YAHOOOO");
+}
+else if (result == "l")
+{
+// do something
+}
+else if (result == "h")
+{
+var newMin = mid;
+GuessNumber(newMin, high);
+}
+else
+{
+Console.WriteLine("Please type 'y', 'l', or 'h'");
+}
+}
+
+        static void Main(string[] args)
+        {
+            var min = 1;
+            var max = 1024;
+            ShowGreeeting();
+            GuessNumber(min, max);
+        }
+    }
+
+}
